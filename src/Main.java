@@ -2,13 +2,6 @@ import java.sql.Array;
 import java.util.*;
 
 public class Main {
-    static void check(int x){
-        if (x == -1) {
-            System.out.println("Нет свободных домов");
-        } else {
-            System.out.print(x);
-        }
-    }
     static  void  printArray(int[] arr){
         for (int i=0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
@@ -23,9 +16,7 @@ public class Main {
         }
         console.close();
 
-
         int leftBorder = 0;
-
         for ( int i = 0; i < distance; i++){
             if (street[i] == 0)
             {
@@ -34,7 +25,6 @@ public class Main {
             }
         }
         var step = leftBorder;
-
         for ( int i = 0; i < leftBorder; i++){
             street[i] = step;
             step--;
@@ -60,17 +50,3 @@ public class Main {
         printArray(street);
     }
 }
-
-
-
-
-//        for ( int i = 0; i < distance; i++){
-//            if (street[i] == 0)
-//            {
-//                first = i;
-//                break;
-//            }
-//        }
-//        for ( int i = 0; i < first; i++){
-//            street[i] = first - i;
-//        }
